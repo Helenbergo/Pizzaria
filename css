@@ -1,0 +1,181 @@
+/* Reset css para tirar todas as margens dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.cabecalho {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho > img {
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ 
+.menu {
+    display: flex;
+}
+
+.menu > li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu > li > a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+    font-weight: 600;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.menu > li:hover {
+    background-color: rgb(183, 0, 0);
+}
+
+.banner {
+    height: 400px;
+    background-image: url(/img/pizza.jpg);
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px green;
+}
+
+.banner > h1 {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 40px;
+}
+
+.botao-vazado {
+    color: white;
+    background: rgba(0,0,0, 0.5);
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+} 
+
+.botao-vazado:hover {
+    background-color: rgba(0, 0, 0, 0.725);
+}
+
+/* Estilizando elementos do corpo da página */
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+}
+h2 {
+    margin-top: 30px;
+    color: rgb(0, 247, 0);
+}
+
+hr {
+    border: none;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 50%, rgba(255,255,255,1) 100%);
+    height: 3px;
+    margin: 10px 20px;
+}
+
+/* Estilizando cards de sabores */
+.sabores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sabor {
+    margin: 10px;
+    background: rgb(0,115,9);
+    background: linear-gradient(100deg, rgba(0,115,9,1) 0%, rgba(11,162,4,1) 48%, rgba(114,251,100,1) 100%);
+    border-radius: 15px;
+    max-width: 250px;
+    min-width: 250px;
+    box-shadow: -5px -5px 10px green;
+}
+
+.sabor > img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+}
+
+.nome {
+    color: white;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+
+.preco {
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+} 
+
+.promocoes {
+    display: flex;
+    overflow: scroll;
+}
+
+.promocoes::-webkit-scrollbar {
+    display: none;
+}
+
+
+.rodape {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 60px;
+    box-shadow: 0 -3px 10px green;
+} 
+
+.endereco {
+    list-style: none;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.redes-sociais {
+    list-style: none;
+}
+
+.redes-sociais > li > a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* Ajustando elementos de acordo com a largura do dispositivo
+- Quando a tela for menor que 500px alterar as
+propriedades da direção do card sabores e colocar
+o sabor utilizando no mínimo 100% da tela */
+@media (max-width:500px) {
+    .sabores {
+        flex-direction: row;
+        margin: 20px;
+    }
+    .sabor {
+        min-width: 100%;
+    }
+}
