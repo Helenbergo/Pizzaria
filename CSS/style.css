@@ -45,7 +45,7 @@ body {
 
 .banner {
     height: 400px;
-    background-image: url(/img/pizza.jpg);
+    background-image: url(../img/pizza.jpg);
     background-size: cover;
     background-position: top center;
     display: flex;
